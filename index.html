@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo Square | Premium Shopping Experience in Dhaka</title>
+  <meta name="description" content="Tokyo Square Shopping Mall - Premium fashion, electronics, cosmetics, and lifestyle products at 9 Ring Rd, Dhaka 1207.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .brand-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.3);
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.85rem 1.8rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .hero-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .hero-badge {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    /* Features Grid */
+    .features {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Products Section */
+    .section-container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 200px;
+      background: #e2e8f0;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1.25rem;
+    }
+
+    .product-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .product-price {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    .buy-btn {
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.65rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .buy-btn:hover {
+      background: var(--accent);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary);
+      color: #cbd5e1;
+      padding: 4rem 1.5rem 2rem;
+      margin-top: 5rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col p, .footer-col li {
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col a {
+      color: #cbd5e1;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: var(--radius);
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 1.5rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">TS</div>
+        <span class="brand-name">Tokyo Square</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#products">Collection</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-content">
+        <span class="hero-badge">📍 9 Ring Rd, Dhaka 1207</span>
+        <h1>Elevate Your Shopping Experience</h1>
+        <p>Discover top-tier fashion, lifestyle, and electronic brands under one roof at Tokyo Square Mall, Mohammadpur.</p>
+        <a href="#products" class="hero-btn">Explore Store Collection &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>🛍️ Premium Outlets</h3>
+      <p>Curated selection of national and international lifestyle brands.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🚚 Fast Delivery</h3>
+      <p>Same-day home delivery across Dhaka Metropolitan Area.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🔒 Authentic Guarantee</h3>
+      <p>100% genuine products directly verified by official dealers.</p>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section-container" id="products">
+    <h2 class="section-title">Featured Products</h2>
+    <p class="section-subtitle">Trending collections directly from our Tokyo Square outlets.</p>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Product" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Minimalist Chrono Watch</div>
+          <div class="product-price">৳ 4,500</div>
+          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Product" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Wireless Studio Headphones</div>
+          <div class="product-price">৳ 3,200</div>
+          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Product" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Pro Runner Sneakers</div>
+          <div class="product-price">৳ 5,800</div>
+          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Product" class="product-img">
+        <div class="product-info">
+          <div class="product-title">Leather Executive Tote</div>
+          <div class="product-price">৳ 6,200</div>
+          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-col" id="about">
+        <h4>Tokyo Square</h4>
+        <p>Your premier destination for luxury shopping and dining in Mohammadpur, Dhaka.</p>
+        <p><strong>Address:</strong> 9 Ring Rd, Dhaka 1207</p>
+        <p><strong>Phone / WhatsApp:</strong> +880 1713-464592</p>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a onclick="openModal('privacyModal')">Privacy Policy</a></li>
+          <li><a onclick="openModal('termsModal')">Terms & Conditions</a></li>
+          <li><a onclick="openModal('refundModal')">Refund & Return Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Operating Hours</h4>
+        <p>Saturday - Wednesday: 10:00 AM - 8:00 PM</p>
+        <p>Friday: 10:00 AM - 8:00 PM</p>
+        <p style="color: #ef4444;">Thursday: Closed</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Tokyo Square. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+      <h3>Privacy Policy</h3>
+      <br>
+      <p>At Tokyo Square, we value your privacy. We collect customer information purely for processing orders and improving user experience. We do not sell or leak customer personal data to third parties.</p>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+      <h3>Terms & Conditions</h3>
+      <br>
+      <p>By browsing or purchasing from our platform, you agree to our terms. Products purchased are subject to availability and store policy guidelines at 9 Ring Rd, Dhaka 1207.</p>
+    </div>
+  </div>
+
+  <!-- Refund Modal -->
+  <div id="refundModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('refundModal')">&times;</span>
+      <h3>Refund Policy</h3>
+      <br>
+      <p>Items can be exchanged within 7 days of purchase with the original receipt provided they are unused and in original packaging.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      if (event.target.className === 'modal') {
+        event.target.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
