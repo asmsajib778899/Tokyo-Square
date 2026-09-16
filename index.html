@@ -3,520 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tokyo Square | Premium Shopping Experience in Dhaka</title>
-  <meta name="facebook-domain-verification" content="nl6xumg8e4ncdaxrfxz4zknyx1qxzz"/>
-  <meta name="description" content="Tokyo Square Shopping Mall - Premium fashion, electronics, cosmetics, and lifestyle products at 9 Ring Rd, Dhaka 1207.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Tokyo Square | Commercial Shop & Space Rental in Mohammadpur</title>
   <style>
-    :root {
-      --primary: #0f172a;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --bg-light: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --radius: 12px;
-      --shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { color: #1e293b; line-height: 1.6; background-color: #f8fafc; }
+    
+    /* Header (1-Line Fixed for Mobile) */
+    header { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; }
+    .logo-box { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-badge { background: #0f172a; color: #fff; font-weight: bold; padding: 6px 10px; border-radius: 6px; font-size: 16px; }
+    .logo-text { font-size: 18px; font-weight: 700; color: #0f172a; white-space: nowrap; }
+    .btn-apply { background: #2563eb; color: #fff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 13px; white-space: nowrap; }
+    
+    /* Hero Banner */
+    .hero { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 60px 15px; color: white; text-align: center; }
+    .hero h1 { font-size: 26px; margin-bottom: 10px; font-weight: 700; }
+    .hero p { font-size: 14px; color: #cbd5e1; max-width: 650px; margin: 0 auto; }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+    /* Container */
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 15px; }
+    .section-title { text-align: center; margin-bottom: 30px; color: #0f172a; font-size: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    
+    /* Cards */
+    .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card-body { padding: 18px; }
+    .card-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
+    .card-details { font-size: 13px; color: #64748b; margin-bottom: 10px; }
+    .card-price { font-size: 18px; color: #2563eb; font-weight: 700; margin-bottom: 12px; }
+    .btn-rent { display: block; width: 100%; background: #0f172a; color: white; text-align: center; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; }
 
-    body {
-      background-color: var(--bg-light);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
+    /* Government Registration & Tax Certificate Section (For Meta BM) */
+    .legal-verification { background: #ffffff; padding: 30px; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin: 40px auto; text-align: center; }
+    .legal-badge { display: inline-block; background: #dcfce7; color: #166534; font-size: 12px; font-weight: bold; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+    .tax-box { border: 2px dashed #94a3b8; padding: 20px; border-radius: 8px; background: #f8fafc; margin-top: 15px; display: inline-block; width: 100%; max-width: 600px; }
+    .tax-img { width: 100%; max-height: 400px; object-fit: contain; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 15px; background: #fff; }
+    .btn-tax { display: inline-block; background: #1e293b; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600; }
 
-    /* Header & Navigation */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
+    /* Rental Terms & Conditions Section */
+    .rental-tnc { background: #ffffff; padding: 40px 15px; border-top: 1px solid #e2e8f0; margin-top: 30px; }
+    .tnc-list { list-style: square; padding-left: 20px; color: #334155; font-size: 14px; }
+    .tnc-list li { margin-bottom: 10px; }
 
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    /* Application Form */
+    .apply-section { background: #f1f5f9; padding: 40px 15px; border-radius: 12px; margin-top: 40px; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #0f172a; margin-bottom: 5px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; background: #fff; }
 
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--primary);
-    }
-
-    .brand-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--primary);
-      color: #fff;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.2rem;
-    }
-
-    .brand-name {
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-muted);
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    /* Hero Section */
-    .hero {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .hero-card {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #ffffff;
-      border-radius: 24px;
-      padding: 4rem 3rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 2rem;
-      align-items: center;
-      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.3);
-    }
-
-    .hero-content h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-
-    .hero-content p {
-      color: #94a3b8;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.85rem 1.8rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: background 0.2s ease;
-    }
-
-    .hero-btn:hover {
-      background: var(--accent-hover);
-    }
-
-    .hero-badge {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-
-    /* Features Grid */
-    .features {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .feature-card {
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .feature-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    /* Products Section */
-    .section-container {
-      max-width: 1200px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-subtitle {
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .product-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-img {
-      width: 100%;
-      height: 200px;
-      background: #e2e8f0;
-      object-fit: cover;
-    }
-
-    .product-info {
-      padding: 1.25rem;
-    }
-
-    .product-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
-    .product-price {
-      color: var(--accent);
-      font-weight: 800;
-      font-size: 1.15rem;
-      margin-bottom: 1rem;
-    }
-
-    .buy-btn {
-      width: 100%;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 0.65rem;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .buy-btn:hover {
-      background: var(--accent);
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--primary);
-      color: #cbd5e1;
-      padding: 4rem 1.5rem 2rem;
-      margin-top: 5rem;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid #334155;
-    }
-
-    .footer-col h4 {
-      color: #fff;
-      font-size: 1.1rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .footer-col p, .footer-col li {
-      font-size: 0.9rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col a {
-      color: #cbd5e1;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .footer-col a:hover {
-      color: #fff;
-    }
-
-    .copyright {
-      max-width: 1200px;
-      margin: 2rem auto 0;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #64748b;
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background: #fff;
-      padding: 2rem;
-      border-radius: var(--radius);
-      max-width: 600px;
-      width: 90%;
-      max-height: 80vh;
-      overflow-y: auto;
-      position: relative;
-    }
-
-    .close-modal {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .hero-card {
-        grid-template-columns: 1fr;
-        padding: 2.5rem 1.5rem;
-      }
-      .nav-links {
-        display: none;
-      }
-    }
+    /* Meta BM Compliant Footer */
+    footer { background: #0b1120; color: #94a3b8; padding: 50px 15px 20px; margin-top: 50px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .footer-col h3, .footer-col h4 { color: #f8fafc; margin-bottom: 15px; font-size: 18px; }
+    .footer-col p, .footer-col a { color: #94a3b8; text-decoration: none; margin-bottom: 10px; display: block; font-size: 14px; line-height: 1.6; }
+    .footer-col a:hover { color: #ffffff; }
+    .copyright { text-align: center; border-top: 1px solid #1e293b; margin-top: 40px; padding-top: 20px; font-size: 13px; color: #64748b; }
   </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="header">
+  <header>
     <div class="nav-container">
-      <a href="#" class="brand-logo">
-        <div class="brand-icon">TS</div>
-        <span class="brand-name">Tokyo Square</span>
+      <a href="#" class="logo-box">
+        <span class="logo-badge">TS</span>
+        <span class="logo-text">Tokyo Square</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#products">Collection</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#apply" class="btn-apply">Book Space</a>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-card">
-      <div class="hero-content">
-        <span class="hero-badge">📍 9 Ring Rd, Dhaka 1207</span>
-        <h1>Elevate Your Shopping Experience</h1>
-        <p>Discover top-tier fashion, lifestyle, and electronic brands under one roof at Tokyo Square Mall, Mohammadpur.</p>
-        <a href="#products" class="hero-btn">Explore Store Collection &rarr;</a>
+    <h1>Prime Commercial Shop & Space Rental</h1>
+    <p>Lease commercial retail shops, food court stalls, and corporate office spaces at Ring Road, Mohammadpur, Dhaka.</p>
+  </section>
+
+  <!-- Available Spaces -->
+  <section class="container" id="spaces">
+    <h2 class="section-title">Available Shops & Spaces</h2>
+    <div class="grid">
+      
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&w=500&q=80" alt="Ground Floor Retail Shop">
+        <div class="card-body">
+          <div class="card-title">Ground Floor Retail Shop</div>
+          <div class="card-details">Size: 250 Sq Ft | Front View | Ideal for Retail Business</div>
+          <div class="card-price">৳ 35,000 / Month</div>
+          <a href="#apply" class="btn-rent">Apply for Rent</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" alt="Food Court Space">
+        <div class="card-body">
+          <div class="card-title">2nd Floor Food Court Stall</div>
+          <div class="card-details">Size: 180 Sq Ft | Gas Connection & Water Supply Included</div>
+          <div class="card-price">৳ 25,000 / Month</div>
+          <a href="#apply" class="btn-rent">Apply for Rent</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500&q=80" alt="Corporate Office Space">
+        <div class="card-body">
+          <div class="card-title">3rd Floor Corporate Office Space</div>
+          <div class="card-details">Size: 600 Sq Ft | Elevator & Generator Backup</div>
+          <div class="card-price">৳ 55,000 / Month</div>
+          <a href="#apply" class="btn-rent">Apply for Rent</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Official Tax & Legal Document Verification (Meta BM Verification Friendly) -->
+  <section class="container">
+    <div class="legal-verification">
+      <span class="legal-badge">✓ Verified Business</span>
+      <h2 style="font-size: 20px; color: #0f172a; margin-bottom: 5px;">Government Registration & Tax Identification</h2>
+      <p style="font-size: 13px; color: #64748b;">Tokyo Square is a fully registered commercial property operating in Mohammadpur, Dhaka.</p>
+      
+      <div class="tax-box">
+        <p style="font-size: 13px; font-weight: bold; margin-bottom: 10px; color: #0f172a;">Official Tax Certificate / Trade License</p>
+        <!-- আপনার ট্যাক্স সার্টিফিকেটের ছবির লিঙ্ক 'src' এর জায়গায় বসাবেন -->
+        <img src="https://via.placeholder.com/600x400?text=Tax+Certificate+Preview+(Upload+Your+Image)" alt="Tokyo Square Tax Certificate" class="tax-img">
+        <br>
+        <a href="#" target="_blank" class="btn-tax">📄 View Official Tax Document (PDF)</a>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section class="features">
-    <div class="feature-card">
-      <h3>🛍️ Premium Outlets</h3>
-      <p>Curated selection of national and international lifestyle brands.</p>
-    </div>
-    <div class="feature-card">
-      <h3>🚚 Fast Delivery</h3>
-      <p>Same-day home delivery across Dhaka Metropolitan Area.</p>
-    </div>
-    <div class="feature-card">
-      <h3>🔒 Authentic Guarantee</h3>
-      <p>100% genuine products directly verified by official dealers.</p>
+  <!-- Rental Terms & Conditions -->
+  <section class="rental-tnc">
+    <div class="container">
+      <h2 class="section-title">Rental Terms & Conditions (T&C)</h2>
+      <ul class="tnc-list">
+        <li><strong>Advance Security Deposit:</strong> 6 months of advance rent is required upon signing tenancy agreement.</li>
+        <li><strong>Tax & Legal Verification:</strong> Tenants and Property Owners comply with NBR tax guidelines and government regulations.</li>
+        <li><strong>Lease Duration:</strong> Minimum agreement period is 1 year (renewable upon agreement).</li>
+        <li><strong>Utility Charges:</strong> Electricity, gas, and service charges will be calculated as per meter usage.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Products -->
-  <section class="section-container" id="products">
-    <h2 class="section-title">Featured Products</h2>
-    <p class="section-subtitle">Trending collections directly from our Tokyo Square outlets.</p>
-    
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Product" class="product-img">
-        <div class="product-info">
-          <div class="product-title">Minimalist Chrono Watch</div>
-          <div class="product-price">৳ 4,500</div>
-          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+  <!-- Tenant Application Form -->
+  <section class="container" id="apply">
+    <div class="apply-section">
+      <h2 class="section-title">Shop Rental Application Form</h2>
+      <form action="#" method="POST">
+        
+        <div class="form-group">
+          <label for="name">Applicant Name / Business Owner *</label>
+          <input type="text" id="name" required placeholder="Enter full legal name">
         </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Product" class="product-img">
-        <div class="product-info">
-          <div class="product-title">Wireless Studio Headphones</div>
-          <div class="product-price">৳ 3,200</div>
-          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="phone" required placeholder="+880 1713-464592">
         </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Product" class="product-img">
-        <div class="product-info">
-          <div class="product-title">Pro Runner Sneakers</div>
-          <div class="product-price">৳ 5,800</div>
-          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+
+        <div class="form-group">
+          <label for="space_type">Preferred Space *</label>
+          <select id="space_type" required>
+            <option value="retail">Ground Floor Retail Shop (250 Sq Ft)</option>
+            <option value="food">Food Court Stall (180 Sq Ft)</option>
+            <option value="office">3rd Floor Corporate Office (600 Sq Ft)</option>
+          </select>
         </div>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Product" class="product-img">
-        <div class="product-info">
-          <div class="product-title">Leather Executive Tote</div>
-          <div class="product-price">৳ 6,200</div>
-          <button class="buy-btn" onclick="alert('Item added to cart!')">Order Now</button>
+
+        <div class="form-group">
+          <label for="message">Business Details / Special Requirements</label>
+          <textarea id="message" rows="3" placeholder="Describe your business concept..."></textarea>
         </div>
-      </div>
+
+        <button type="submit" class="btn-rent" style="border:none; cursor:pointer;">Submit Rental Application</button>
+      </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="footer-container">
-      <div class="footer-col" id="about">
-        <h4>Tokyo Square</h4>
-        <p>Your premier destination for luxury shopping and dining in Mohammadpur, Dhaka.</p>
+  <!-- Compliance Footer for Meta BM -->
+  <footer>
+    <div class="footer-grid">
+      
+      <div class="footer-col">
+        <h3>Tokyo Square</h3>
+        <p>Your premier destination for commercial shop lease and dining spaces in Mohammadpur, Dhaka.</p>
         <p><strong>Address:</strong> 9 Ring Rd, Dhaka 1207</p>
         <p><strong>Email:</strong> admin@tokyosquare.shop</p>
         <p><strong>Phone / WhatsApp:</strong> +880 1713-464592</p>
       </div>
+
       <div class="footer-col">
-        <h4>Customer Care</h4>
-        <ul>
-          <li><a onclick="openModal('privacyModal')">Privacy Policy</a></li>
-          <li><a onclick="openModal('termsModal')">Terms & Conditions</a></li>
-          <li><a onclick="openModal('refundModal')">Refund & Return Policy</a></li>
-        </ul>
+        <h4>Customer Care & Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Refund & Return Policy</a>
       </div>
-      <div class="footer-col">
-        <h4>Operating Hours</h4>
-        <p>Saturday - Wednesday: 10:00 AM - 8:00 PM</p>
-        <p>Friday: 10:00 AM - 8:00 PM</p>
-        <p style="color: #ef4444;">Thursday: Closed</p>
-      </div>
+
     </div>
+
     <div class="copyright">
-      &copy; 2026 Tokyo Square. All rights reserved.
+      &copy; 2026 Tokyo Square. All Rights Reserved.
     </div>
   </footer>
 
-  <!-- Privacy Policy Modal -->
-  <div id="privacyModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
-      <h3>Privacy Policy</h3>
-      <br>
-      <p>At Tokyo Square, we value your privacy. We collect customer information purely for processing orders and improving user experience. We do not sell or leak customer personal data to third parties.</p>
-    </div>
-  </div>
-
-  <!-- Terms Modal -->
-  <div id="termsModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
-      <h3>Terms & Conditions</h3>
-      <br>
-      <p>By browsing or purchasing from our platform, you agree to our terms. Products purchased are subject to availability and store policy guidelines at 9 Ring Rd, Dhaka 1207.</p>
-    </div>
-  </div>
-
-  <!-- Refund Modal -->
-  <div id="refundModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('refundModal')">&times;</span>
-      <h3>Refund Policy</h3>
-      <br>
-      <p>Items can be exchanged within 7 days of purchase with the original receipt provided they are unused and in original packaging.</p>
-    </div>
-  </div>
-
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
-    }
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-    window.onclick = function(event) {
-      if (event.target.className === 'modal') {
-        event.target.style.display = 'none';
-      }
-    }
-  </script>
 </body>
 </html>
